@@ -1,0 +1,7 @@
+<div>
+  <h1> You currently have <%= @lists.count %> Lists </h1>
+  <% @lists.each do |list| %>
+    <%= link_to "#{list.name}", list_path(list) %>
+  <% end %>
+</div>
+<h4><%=link_to "Create a new list", new_list_path()%></h4>
